@@ -14,9 +14,9 @@ exports.handler = function(event,context,callback){
     connection.query('UPDATE data SET value = value + 1 WHERE name = "counter";');
 
     connection.query('SELECT value FROM data WHERE name = "counter";', function(err, rows, fields) {
-      if (err) throw err;
-      callback(null, rows[0]['value'] );
-
+      if (err)
+        throw err;
+      callback(null, rows[0]['value']);
     });
     
     connection.end(function(err) {
