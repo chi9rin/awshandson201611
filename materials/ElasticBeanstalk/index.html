@@ -13,7 +13,7 @@
         }
 
         function checkStatus(){
-          if (xhr_context.readyState == 3 && xhr_context.status == 200) {
+          if (xhr_context.readyState == 4 && xhr_context.status == 200) {
             var node = document.getElementById("disp");
             node.innerHTML = xhr_context.responseText;
           }
